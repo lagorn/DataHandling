@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Я родился");
+        DemoService demo = new DemoService();
+        demo.execute();
     }
 }
