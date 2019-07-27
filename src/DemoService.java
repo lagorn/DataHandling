@@ -14,8 +14,6 @@ public class DemoService {
         System.out.println("Прошло " + period.getMonths()+ " месяца.");
         System.out.println("Прошло " + period.getDays()+ " дня.");
 
-        LocalDateTime timenow_new = LocalDateTime.MIN.now();
-        System.out.println(timenow_new);
     }
 
 }
