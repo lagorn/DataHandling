@@ -1,20 +1,38 @@
-import java.text.SimpleDateFormat;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
-import java.util.Date;
 import java.util.Locale;
-import java.util.logging.SimpleFormatter;
 
 public class DateService {
-    public void youAge (/*LocalDateTime myBirthday*/) {
-        Date timenow = new Date();
-        SimpleDateFormat formatForDate = new SimpleDateFormat("'Эра 'G dd-MM-yyyy 'и время: ' HH:mm:ss:SSS");
-        System.out.println(formatForDate.format(timenow));
 
-        LocalDateTime timenow1 = LocalDateTime.now();
-        System.out.println(timenow1);
+    public void youAge(LocalDateTime birthTime) {
 
+        LocalDateTime currentTime = LocalDateTime.now();
 
+        System.out.printf(Locale.US, "С момента рождения прошло: %d лет, %d месяцев, %,d дней, %,d часов, %,d минут, %,d секунд\n",
+                ChronoUnit.YEARS.between(birthTime, currentTime),
+                ChronoUnit.MONTHS.between(birthTime, currentTime),
+                ChronoUnit.DAYS.between(birthTime, currentTime),
+                ChronoUnit.HOURS.between(birthTime, currentTime),
+                ChronoUnit.MINUTES.between(birthTime, currentTime),
+                ChronoUnit.SECONDS.between(birthTime, currentTime)
+        );
+    }
+
+    public long daysBetween(String firstDateStr, String secondDateStr) {
+
+        DateTimeFormatter format =  DateTimeFormatter.ofPattern("dd.MM.yyyy");
+        LocalDate firstDate = LocalDate.parse(firstDateStr, format);
+        LocalDate secondDate = LocalDate.parse(secondDateStr, format);
+
+        return  ChronoUnit.DAYS.between(firstDate, secondDate);
+    }
+
+    public String convertDate (String dateStr) {
+
+        ZonedDateTime date = ZonedDateTime.parse(dateStr).withZoneSameInstant(ZoneId.of("Europe/Samara"));
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
+        return date.format(formatter);
     }
 }
