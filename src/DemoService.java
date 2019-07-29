@@ -2,6 +2,9 @@ import java.time.*;
 import java.time.format.DateTimeFormatter;
 
 public class DemoService {
+    public void execute(){
+        System.out.println("ПУсто");
+    }
     public void HowOldIam(){
         LocalDate timenow = LocalDate.now();
         System.out.println(timenow);
