@@ -7,12 +7,13 @@ import java.util.Locale;
 import java.util.logging.SimpleFormatter;
 
 public class DateService {
-    public void youAge (/*LocalDateTime myBirthday*/) {
-        Date timenow = new Date();
 
-        SimpleDateFormat formatForDate = new SimpleDateFormat("'Эра 'G dd-MM-yyyy 'и время: ' HH:mm:ss:SSS");
+    public void youAge(LocalDateTime myBirthday){
+        System.out.println(myBirthday);
+        Instant dateToday = Instant.now();
+        System.out.println(dateToday);
 
-        System.out.println(formatForDate.format(timenow));
+
 
     }
 }
