@@ -10,8 +10,17 @@ public class DateService {
 
     public void youAge(LocalDateTime myBirthday){
         System.out.println(myBirthday);
-        Instant dateToday = Instant.now();
+        LocalDateTime dateToday = LocalDateTime.now();
         System.out.println(dateToday);
+        Duration timeLive = Duration.between(myBirthday,dateToday);
+        System.out.println(timeLive.toDays());
+        System.out.println(timeLive.toHoursPart());
+        System.out.println(timeLive.toMinutesPart());
+        System.out.println(timeLive.toSecondsPart());
+        System.out.println(timeLive.toMillisPart());
+
+
+
 
 
 
