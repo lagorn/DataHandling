@@ -13,16 +13,27 @@ public class DateService {
         LocalDateTime dateToday = LocalDateTime.now();
         System.out.println(dateToday);
         Duration timeLive = Duration.between(myBirthday,dateToday);
-        System.out.println(timeLive.toDays());
-        System.out.println(timeLive.toHoursPart());
-        System.out.println(timeLive.toMinutesPart());
-        System.out.println(timeLive.toSecondsPart());
-        System.out.println(timeLive.toMillisPart());
+        System.out.println(timeLive.toDays() + " Days");
+        System.out.println(timeLive.toHoursPart()+ " Hours");
+        System.out.println(timeLive.toMinutesPart()+ " Minutes");
+        System.out.println(timeLive.toSecondsPart()+ " Seconds");
+        System.out.println(timeLive.toMillisPart()+ " Millis");
+    }
+    public void myAge(LocalDateTime myBirthday){
+        LocalDateTime dateToday = LocalDateTime.now();
 
+        long years = ChronoUnit.YEARS.between(myBirthday,dateToday);
+        long months = ChronoUnit.MONTHS.between(myBirthday,dateToday);
+        long weeks = ChronoUnit.WEEKS.between(myBirthday,dateToday);
+        long days = ChronoUnit.DAYS.between(myBirthday,dateToday);
+        long hours = ChronoUnit.HOURS.between(myBirthday,dateToday);
+        long minutes = ChronoUnit.MINUTES.between(myBirthday,dateToday);
+        long seconds = ChronoUnit.SECONDS.between(myBirthday,dateToday);
+        long milis = ChronoUnit.MILLIS.between(myBirthday,dateToday);
 
-
-
-
+        System.out.print("Вам " + years + " лет " + months +" месяцев " + weeks +" недель " + days + " дней ");
+        System.out.print(hours + " часов "+ minutes + " минут " + seconds + " секунд " + milis +" миллисекунд");
 
     }
+
 }
