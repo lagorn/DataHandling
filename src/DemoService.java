@@ -14,9 +14,8 @@ public class DemoService {
         dateService.myAge(timeBirthLAlex);
 
         //Задание 1.2
-
-
-
+        LocalDate date1 = LocalDate.of(1993,7,2);
+        LocalDate date2 = LocalDate.of(1987,10,3);
+        System.out.println((dateService.numberDays(date1,date2)) + " дней");
     }
-
 }

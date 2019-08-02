@@ -32,11 +32,12 @@ public class DateService {
         long milis = ChronoUnit.MILLIS.between(myBirthday,dateToday);
 
         System.out.print("Вам " + years + " лет " + months +" месяцев " + weeks +" недель " + days + " дней ");
-        System.out.print(hours + " часов "+ minutes + " минут " + seconds + " секунд " + milis +" миллисекунд");
+        System.out.println(hours + " часов "+ minutes + " минут " + seconds + " секунд " + milis +" миллисекунд");
     }
-    public void numberDays (LocalDate date1,LocalDate date2){
-        Duration days = Duration.between(date1,date2);
-        System.out.println(days.toDays());
+    public long numberDays (LocalDate date1,LocalDate date2){
+        System.out.println("-------------------------------------------");
+        long dayt = ChronoUnit.DAYS.between(date2,date1);
+        if(dayt<0){return dayt*-1;}
+        return dayt;
     }
-
 }
