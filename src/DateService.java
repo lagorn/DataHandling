@@ -33,7 +33,10 @@ public class DateService {
 
         System.out.print("Вам " + years + " лет " + months +" месяцев " + weeks +" недель " + days + " дней ");
         System.out.print(hours + " часов "+ minutes + " минут " + seconds + " секунд " + milis +" миллисекунд");
-
+    }
+    public void numberDays (LocalDate date1,LocalDate date2){
+        Duration days = Duration.between(date1,date2);
+        System.out.println(days.toDays());
     }
 
 }
