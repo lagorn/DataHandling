@@ -40,10 +40,9 @@ public class DateService {
     }
     public void DateConversion(String dateString){
 //        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEE, LLL dd, yyyy HH:mm:ss a");
-        LocalDateTime localDateTime = LocalDateTime.parse(dateString);
-        localDateTime.format(formatter);
-        System.out.println(localDateTime.format(formatter));
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE, MMM d, yyyy hh:mm:ss a",Locale.ENGLISH);
+        LocalDateTime localDateTime = LocalDateTime.parse(dateString,formatter);
+        System.out.println(localDateTime);
 
 
 

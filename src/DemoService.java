@@ -19,7 +19,7 @@ public class DemoService {
         System.out.println((dateService.numberDays(date1,date2)) + " дней");
 
         //Задание 1.3
-        String str = "Friday, Aug 10, 2016 12:10:56 PM";
+        String str = "Wednesday, Aug 10, 2016 12:10:56 PM";
         dateService.DateConversion(str);
 
     }
