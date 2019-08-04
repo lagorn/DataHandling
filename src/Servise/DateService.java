@@ -1,3 +1,5 @@
+package Servise;
+
 import java.text.SimpleDateFormat;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
@@ -39,16 +41,9 @@ public class DateService {
         return dayt;
     }
     public void DateConversion(String dateString){
-//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE, MMM d, yyyy hh:mm:ss a",Locale.ENGLISH);
         LocalDateTime localDateTime = LocalDateTime.parse(dateString,formatter);
         System.out.println(localDateTime);
-
-
-
-//        ZonedDateTime date = ZonedDateTime.parse(dateString).withZoneSameInstant(ZoneId.of("Europe/Samara"));
-//        DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-
     }
 
 }

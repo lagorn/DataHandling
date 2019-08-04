@@ -1,11 +1,15 @@
+package DemoService;
+
+import Servise.DateService;
+import Servise.NumericalOperations;
+
 import java.time.*;
-import java.time.format.DateTimeFormatter;
 
 
 public class DemoService {
     DateService dateService = new DateService();
 
-    public void execute(){
+    public void executeTask1(){
         //Задание 1.1
         LocalDateTime timeBirth = LocalDateTime.of(1993,7,1,11,45,21,0);
         dateService.youAge(timeBirth);
@@ -21,6 +25,12 @@ public class DemoService {
         //Задание 1.3
         String str = "Wednesday, Aug 10, 2016 12:10:56 PM";
         dateService.DateConversion(str);
+    }
+    public void executeTask2(){
+        //Задание 2.1
+        NumericalOperations numericalOperations = new NumericalOperations();
+
+        numericalOperations.circleArea(5);
 
     }
 }
