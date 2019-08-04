@@ -38,4 +38,18 @@ public class DateService {
         if(dayt<0){return dayt*-1;}
         return dayt;
     }
+    public void DateConversion(String dateString){
+//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEE, LLL dd, yyyy HH:mm:ss a");
+        LocalDateTime localDateTime = LocalDateTime.parse(dateString);
+        localDateTime.format(formatter);
+        System.out.println(localDateTime.format(formatter));
+
+
+
+//        ZonedDateTime date = ZonedDateTime.parse(dateString).withZoneSameInstant(ZoneId.of("Europe/Samara"));
+//        DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
+    }
+
 }

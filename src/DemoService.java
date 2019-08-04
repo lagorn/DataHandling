@@ -17,5 +17,10 @@ public class DemoService {
         LocalDate date1 = LocalDate.of(1993,7,2);
         LocalDate date2 = LocalDate.of(1987,10,3);
         System.out.println((dateService.numberDays(date1,date2)) + " дней");
+
+        //Задание 1.3
+        String str = "Friday, Aug 10, 2016 12:10:56 PM";
+        dateService.DateConversion(str);
+
     }
 }
