@@ -1,8 +1,6 @@
 package DemoService;
-
 import Servise.DateService;
 import Servise.NumericalOperations;
-
 import java.time.*;
 
 
@@ -32,5 +30,8 @@ public class DemoService {
 
         numericalOperations.circleArea(5);
 
+        //Задание 2.2
+        String str = "0.1, 0.15 и 0.25";
+        numericalOperations.numberFromString(str);
     }
 }
